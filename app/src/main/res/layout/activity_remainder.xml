@@ -35,6 +35,8 @@
             android:background="@drawable/buttonstyle3" />
     </LinearLayout>
 
+    <!-- ############################################ -->
+
 
     <LinearLayout
         android:id="@+id/midle"
@@ -49,30 +51,30 @@
         android:orientation="vertical"
         android:visibility="visible">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        >
-        <ImageView
-            android:id="@+id/imageAdd"
-            android:layout_width="48dp"
-            android:layout_height="63dp"
-            app:srcCompat="@drawable/more"
-            android:layout_marginStart="10dp"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/midle">
 
-            />
-        <Button
-            android:id="@+id/adddata"
-            android:layout_width="232dp"
-            android:layout_height="63dp"
-            android:layout_marginLeft="25dp"
-            android:textAlignment="center"
-            android:background="@drawable/buttonstyle"
-            android:text="Add" />
-    </LinearLayout>
-    <LinearLayout
+            <ImageView
+                android:id="@+id/imageAdd"
+                android:layout_width="87dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="100dp"
+                app:srcCompat="@drawable/more" />
+            <!--<Button-->
+            <!--android:id="@+id/adddata"-->
+            <!--android:layout_width="232dp"-->
+            <!--android:layout_height="63dp"-->
+            <!--android:layout_marginLeft="25dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:background="@drawable/buttonstyle"-->
+            <!--android:text="Add" />-->
+        </LinearLayout>
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -92,7 +94,7 @@
             android:textAlignment="center"
             android:background="@drawable/buttonstyle"
             android:text="View" />
-    </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,26 +116,44 @@
                 android:background="@drawable/buttonstyle"
                 android:text="View page" />
         </LinearLayout>
+
+
     </LinearLayout>
 
 
 
+<!-- #################################################### -->
+
     <RelativeLayout
+        android:id="@+id/addview"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        app:layout_constraintTop_toBottomOf="@+id/head"
         android:visibility="invisible"
-        android:id="@+id/addview">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head">
+
+        <ImageView
+            android:id="@+id/imageClose"
+            android:layout_width="87dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="325dp"
+            android:layout_marginEnd="1dp"
+            app:srcCompat="@drawable/closeremove" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
+            android:layout_marginTop="60dp"
             >
+
             <TextView
                 android:id="@+id/id_text"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="70dp"
                 android:text="ID"
                 android:textAlignment="center"
@@ -146,85 +166,87 @@
                 android:layout_width="245dp"
                 android:layout_height="63dp"
                 android:ems="10"
-                android:textAlignment="center"
                 android:inputType="textPersonName"
-                />
+                android:textAlignment="center" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginTop="60dp"
-            >
-            <TextView
-                android:id="@+id/id_text1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:text="ID"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/edit_id1"
-                android:layout_width="245dp"
-                android:layout_height="63dp"
-                android:ems="10"
-                android:textAlignment="center"
-                android:inputType="textPersonName"
-                />
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
             android:layout_marginTop="120dp"
-            >
+            android:layout_marginEnd="1dp">
+
             <TextView
-                android:id="@+id/id_text2"
-                android:layout_width="70dp"
+                android:id="@+id/sname_text"
+                android:layout_width="100dp"
                 android:layout_height="70dp"
-                android:text="ID"
+                android:text="Sname"
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/edit_id2"
+                android:id="@+id/edit_sname"
                 android:layout_width="245dp"
                 android:layout_height="63dp"
                 android:ems="10"
-                android:textAlignment="center"
                 android:inputType="textPersonName"
-                />
+                android:textAlignment="center" />
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginTop="200dp">
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="1dp">
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:text="Time"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/edit_time"
+                android:layout_width="245dp"
+                android:layout_height="63dp"
+                android:ems="10"
+                android:text="HH:MM"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="1dp">
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ADD"
-                />
+                android:text="ADD" />
+
             <Button
                 android:id="@+id/viewbut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View"
-                />
+                android:text="View" />
 
         </LinearLayout>
 
     </RelativeLayout>
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>

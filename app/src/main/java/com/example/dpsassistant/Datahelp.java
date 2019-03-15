@@ -8,10 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Datahelp extends SQLiteOpenHelper {
 
-    public static final String database_name = "name.db";
+    public static final String database_name = "tool1.db";
     public static final String table_name = "name";
     public static final String col1 = "Id";
     public static final String col2 = "NAME";
+    public static final String col3 = "TIME";
+
 
     public Datahelp(Context context)
     {
@@ -20,7 +22,7 @@ public class Datahelp extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+table_name+ "(ID text, NAME text)");
+        db.execSQL("create table "+table_name+ "(ID text, NAME text, TIME text)");
 
     }
 
@@ -30,11 +32,13 @@ public class Datahelp extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insert(String id, String name){
+    public boolean insert(String id, String name, String time){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(col1,id);
         contentValues.put(col2,name);
+        contentValues.put(col3,time);
+
         long result = sqLiteDatabase.insert(table_name,null,contentValues);
         if (result == -1){
             return false;

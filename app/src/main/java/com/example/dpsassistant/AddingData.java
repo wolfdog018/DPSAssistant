@@ -22,7 +22,6 @@ public class AddingData extends AppCompatActivity {
 
 
         dbhelp = new Datahelp(this);
-
         eid = findViewById(R.id.edit_id);
         ename = findViewById(R.id.edit_sname);
         button = findViewById(R.id.button);
