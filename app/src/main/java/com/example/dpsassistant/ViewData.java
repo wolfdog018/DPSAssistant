@@ -21,7 +21,7 @@ public class ViewData extends AppCompatActivity {
     ArrayList<String> listItem;
     ArrayAdapter arrayAdapter;
     ListView listView;
-    int image = R.drawable.trash;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,6 @@ public class ViewData extends AppCompatActivity {
 
     private void viewData() {
         Cursor res = dbhelp.getView();
-        ImageView imageView = findViewById(R.id.imageView);
 
         if(res.getCount() == 0) {
             Toast.makeText(this,"No data",Toast.LENGTH_SHORT).show();
